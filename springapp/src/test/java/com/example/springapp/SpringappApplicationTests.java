@@ -33,7 +33,7 @@ public class SpringappApplicationTests {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(menuItemToAdd)))
                 .andExpect(status().isOk())
-                .andExpect(content().string("true"));
+                .andExpect(content().string(true));
     }
 
     @Test

@@ -17,9 +17,17 @@ public class MenuService {
 
     
     public boolean addMenuItem(MenuItem menuItem) {
+
+        try
+        {
         menuItem.setId(nextId++);
         menuItems.put(menuItem.getId(), menuItem);
         return true;
+        }
+        catch(Exception e)
+        {
+            return false;
+        }
     }
 
 
